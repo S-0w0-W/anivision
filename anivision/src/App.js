@@ -1,13 +1,22 @@
 import React from "react";
-// import logo from "./logo.svg";
-// import topNav from "./components/topNav";
 import "./App.css";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  Redirect,
+} from "react-router-dom";
+
+import Main from "./pages/index";
+import About from "./pages/about";
 
 function App() {
   return (
-    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-      Button
-    </button>
+    <Router>
+      <Route exact path="/Home" component={Main} />
+      <Route exact path="/About" component={About} />
+    </Router>
   );
 }
 
