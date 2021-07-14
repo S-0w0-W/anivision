@@ -52,7 +52,7 @@ export default function TopNav({ PageName }) {
   const list = (anchor) => (
     <div className={classes.list} role="presentation">
       <List>
-        {["Home", "About", "Send email", "Drafts"].map((text, index) => (
+        {["Home", "About", "THREE"].map((text, index) => (
           <ListItem button key={text} component={Link} to={text}>
             <ListItemIcon>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -61,7 +61,7 @@ export default function TopNav({ PageName }) {
           </ListItem>
         ))}
       </List>
-      <Divider />
+      {/* <Divider />
       <List>
         {["All mail", "Trash", "Spam"].map((text, index) => (
           <ListItem button key={text}>
@@ -71,7 +71,7 @@ export default function TopNav({ PageName }) {
             <ListItemText primary={text} />
           </ListItem>
         ))}
-      </List>
+      </List> */}
     </div>
   );
 

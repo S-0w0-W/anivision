@@ -1,0 +1,27 @@
+html, body {
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+
+#c {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background-color:aqua;
+}
+
+#THREE_page_body{
+  width: 100vw;
+  height: 100vh;
+}
+
+#root{
+  width: 100vw;
+  height: 100vh;
+}
