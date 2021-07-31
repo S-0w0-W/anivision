@@ -1,4 +1,5 @@
 #c{
     background-image: url("https://media-exp1.licdn.com/dms/image/C5603AQHZrMLlNEujLw/profile-displayphoto-shrink_200_200/0/1614307873790?e=1632960000&v=beta&t=9asZCAS91_OC4HxaOppbr0rLStkkUKSu-1bY_lpdtgE") !important;
-    background-size: contain;
+    /* background-repeat: no-repeat; */
+    background-size:cover;
 }

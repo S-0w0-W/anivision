@@ -1,17 +1,14 @@
 import React, { useState } from 'react'
 import TopNav from "../components/topNav";
 import * as THREE from "three";
-import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Html } from '@react-three/drei'
-import { TextureLoader } from 'three/src/loaders/TextureLoader'
 import "../css/three.css"
 
 document.addEventListener('mousemove', onMouseUpdate, false);
 
 var x = null;
 var y = null;
-
-var test = null;
 
 function onMouseUpdate(e) {
   // x = (e.pageX / window.innerWidth) - 0.5;
@@ -24,9 +21,11 @@ function MyRotatingBox(props) {
   const myMesh = React.useRef();
   const [hovered, setHover] = useState(false)
 
+
+
   useFrame(({ clock }) => {
     const a = clock.getElapsedTime();
-    const b = 5
+    // const b = 5
 
     myMesh.current.rotation.x = a;
     myMesh.current.rotation.y = a;
@@ -42,9 +41,8 @@ function MyRotatingBox(props) {
     // myMesh.current.position.set(myMesh.current.position.x-0.01,myMesh.current.position.y-0.01,0);
   });
 
-  const [size, set] = useState(0.5)
   const [hidden, setVisible] = useState(false)
-  // const colorMap = useLoader(TextureLoader, "/home/shiyao-wang/Documents/websites/anivision/anivision/src/pages/test.jpg")
+  const texture = new THREE.TextureLoader().load("https://media-exp1.licdn.com/dms/image/C5603AQHZrMLlNEujLw/profile-displayphoto-shrink_200_200/0/1614307873790?e=1632960000&v=beta&t=9asZCAS91_OC4HxaOppbr0rLStkkUKSu-1bY_lpdtgE");
 
   return (
     <mesh
@@ -53,7 +51,7 @@ function MyRotatingBox(props) {
       onPointerOver={(e) => setHover(true)}
       onPointerOut={(e) => setHover(false)}>
       <boxBufferGeometry />
-      <meshPhongMaterial />
+      <meshPhongMaterial map={texture} />
       <Html
         style={{
           transition: 'all 0.2s',
@@ -65,8 +63,7 @@ function MyRotatingBox(props) {
         transform
         occlude
         onOcclude={setVisible}>
-        <h1>Shiyao Wang</h1>
-        <img src="https://media-exp1.licdn.com/dms/image/C5603AQHZrMLlNEujLw/profile-displayphoto-shrink_200_200/0/1614307873790?e=1632960000&v=beta&t=9asZCAS91_OC4HxaOppbr0rLStkkUKSu-1bY_lpdtgE" />
+        <h1 id='myName'>Shiyao Wang</h1>
       </Html>
 
     </mesh>
@@ -81,7 +78,7 @@ function RotatingStill(props) {
 
   useFrame(({ clock }) => {
     const a = clock.getElapsedTime();
-    const b = 5
+    // const b = 5
 
     myMesh.current.rotation.x = a;
     myMesh.current.rotation.y = a;
@@ -95,7 +92,7 @@ function RotatingStill(props) {
     // myMesh.current.position.set(myMesh.current.position.x-0.01,myMesh.current.position.y-0.01,0);
   });
 
-  const [size, set] = useState(0.5)
+  // const [size, set] = useState(0.5)
   const [hidden, setVisible] = useState(false)
   const texture = new THREE.TextureLoader().load("https://media-exp1.licdn.com/dms/image/C5603AQHZrMLlNEujLw/profile-displayphoto-shrink_200_200/0/1614307873790?e=1632960000&v=beta&t=9asZCAS91_OC4HxaOppbr0rLStkkUKSu-1bY_lpdtgE");
   // const colorMap = useLoader(TextureLoader, "/home/shiyao-wang/Documents/websites/anivision/anivision/src/pages/test.jpg")
@@ -119,8 +116,7 @@ function RotatingStill(props) {
         transform
         occlude
         onOcclude={setVisible}>
-        <h1>Shiyao Wang</h1>
-        <img src="https://media-exp1.licdn.com/dms/image/C5603AQHZrMLlNEujLw/profile-displayphoto-shrink_200_200/0/1614307873790?e=1632960000&v=beta&t=9asZCAS91_OC4HxaOppbr0rLStkkUKSu-1bY_lpdtgE" />
+        <h1 id="myName">Shiyao Wang</h1>
       </Html>
 
     </mesh>
