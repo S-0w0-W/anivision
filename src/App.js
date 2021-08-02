@@ -12,9 +12,9 @@ import Three from "./pages/three";
 function App() {
   return (
     <Router>
-      <Route exact path="https://s-0w0-w.github.io/anivision/Home" component={Main} />
-      <Route exact path="https://s-0w0-w.github.io/anivision/About" component={About} />
-      <Route exact path="https://s-0w0-w.github.io/anivision/Three" component={Three} />
+      <Route exact path="anivision/Home" component={Main} />
+      <Route exact path="anivision/About" component={About} />
+      <Route exact path="anivision/Three" component={Three} />
     </Router>
   );
 }
