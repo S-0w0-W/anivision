@@ -14,32 +14,13 @@ function App() {
   return (
     <Router>
       <div>
-        {/* <nav>
-          <ul>
-            <li>
-
-            </li>
-
-            <li>
-
-            </li>
-
-            <li>
-
-            </li>
-          </ul>
-
-        </nav> */}
-
+        <h1>BRUH</h1>
         <Switch>
           <Route path="anivision/home" component={Main} />
           <Route path="anivision/about" component={About} />
           <Route path="anivision/three" component={Three} />
         </Switch>
       </div>
-      {/* <Route exact path="anivision/Home" component={Main} />
-      <Route exact path="anivision/About" component={About} />
-      <Route exact path="anivision/Three" component={Three} /> */}
     </Router>
   );
 }
