@@ -32,9 +32,9 @@ function App() {
         </nav> */}
 
         <Switch>
-          <Route path="/home" component={Main} />
-          <Route path="/about" component={About} />
-          <Route path="/three" component={Three} />
+          <Route path="anivision/home" component={Main} />
+          <Route path="anivision/about" component={About} />
+          <Route path="anivision/three" component={Three} />
         </Switch>
       </div>
       {/* <Route exact path="anivision/Home" component={Main} />
