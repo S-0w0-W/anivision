@@ -2,7 +2,7 @@
   "name": "anivision",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://S-0w0-W.github.io/anivision/home",
+  "homepage": "http://s-0w0-w.github.io/anivision/home",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
