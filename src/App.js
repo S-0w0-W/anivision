@@ -26,7 +26,6 @@ function App() {
     // </Router>
     <HashRouter basename='/'>
       <div>
-        <Main/>
 
         <hr />
 
