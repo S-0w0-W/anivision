@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/anivision/precache-manifest.29c3f4509aebf074a587318cdac468bd.js"
+  "/anivision/precache-manifest.2b8a17ba0737ea30b2ee4c9b64fdb1bb.js"
 );
 
 self.addEventListener('message', (event) => {

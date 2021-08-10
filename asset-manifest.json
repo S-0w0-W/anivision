@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/anivision/static/css/main.be7d3e6f.chunk.css",
-    "main.js": "/anivision/static/js/main.1c679866.chunk.js",
-    "main.js.map": "/anivision/static/js/main.1c679866.chunk.js.map",
+    "main.js": "/anivision/static/js/main.d2b978fc.chunk.js",
+    "main.js.map": "/anivision/static/js/main.d2b978fc.chunk.js.map",
     "runtime-main.js": "/anivision/static/js/runtime-main.edda786f.js",
     "runtime-main.js.map": "/anivision/static/js/runtime-main.edda786f.js.map",
-    "static/js/2.ca975f95.chunk.js": "/anivision/static/js/2.ca975f95.chunk.js",
-    "static/js/2.ca975f95.chunk.js.map": "/anivision/static/js/2.ca975f95.chunk.js.map",
+    "static/js/2.f58f38f9.chunk.js": "/anivision/static/js/2.f58f38f9.chunk.js",
+    "static/js/2.f58f38f9.chunk.js.map": "/anivision/static/js/2.f58f38f9.chunk.js.map",
     "index.html": "/anivision/index.html",
-    "precache-manifest.29c3f4509aebf074a587318cdac468bd.js": "/anivision/precache-manifest.29c3f4509aebf074a587318cdac468bd.js",
+    "precache-manifest.2b8a17ba0737ea30b2ee4c9b64fdb1bb.js": "/anivision/precache-manifest.2b8a17ba0737ea30b2ee4c9b64fdb1bb.js",
     "service-worker.js": "/anivision/service-worker.js",
     "static/css/main.be7d3e6f.chunk.css.map": "/anivision/static/css/main.be7d3e6f.chunk.css.map",
-    "static/js/2.ca975f95.chunk.js.LICENSE.txt": "/anivision/static/js/2.ca975f95.chunk.js.LICENSE.txt"
+    "static/js/2.f58f38f9.chunk.js.LICENSE.txt": "/anivision/static/js/2.f58f38f9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.edda786f.js",
-    "static/js/2.ca975f95.chunk.js",
+    "static/js/2.f58f38f9.chunk.js",
     "static/css/main.be7d3e6f.chunk.css",
-    "static/js/main.1c679866.chunk.js"
+    "static/js/main.d2b978fc.chunk.js"
   ]
 }
