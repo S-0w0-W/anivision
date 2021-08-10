@@ -13,22 +13,8 @@ import Three from "./pages/three";
 
 function App() {
   return (
-    // <Router>
-    //   <div>
-    //     <h1>BRUH</h1>
-    //     <Main/>
-    //     <Switch>
-    //       <Route path="anivision/home" component={Main} />
-    //       <Route path="anivision/about" component={About} />
-    //       <Route path="anivision/three" component={Three} />
-    //     </Switch>
-    //   </div>
-    // </Router>
     <HashRouter basename='/'>
       <div>
-
-        <hr />
-
         <Route exact path="/" component={Main} />
         <Route path="/about" component={About} />
         <Route path="/three" component={Three} />
