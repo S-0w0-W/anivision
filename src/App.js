@@ -3,7 +3,8 @@ import "./App.css";
 import {
   BrowserRouter as Router,
   Route,
-  Switch
+  Switch,
+  HashRouter
 } from "react-router-dom";
 
 import Main from "./pages/index";
@@ -12,17 +13,28 @@ import Three from "./pages/three";
 
 function App() {
   return (
-    <Router>
+    // <Router>
+    //   <div>
+    //     <h1>BRUH</h1>
+    //     <Main/>
+    //     <Switch>
+    //       <Route path="anivision/home" component={Main} />
+    //       <Route path="anivision/about" component={About} />
+    //       <Route path="anivision/three" component={Three} />
+    //     </Switch>
+    //   </div>
+    // </Router>
+    <HashRouter basename='/'>
       <div>
-        <h1>BRUH</h1>
         <Main/>
-        <Switch>
-          <Route path="anivision/home" component={Main} />
-          <Route path="anivision/about" component={About} />
-          <Route path="anivision/three" component={Three} />
-        </Switch>
+
+        <hr />
+
+        <Route exact path="/" component={Main} />
+        <Route path="/about" component={About} />
+        <Route path="/three" component={Three} />
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
