@@ -15,7 +15,7 @@ function App() {
     <Router>
       <div>
         <h1>BRUH</h1>
-        <main/>
+        <Main/>
         <Switch>
           <Route path="anivision/home" component={Main} />
           <Route path="anivision/about" component={About} />
