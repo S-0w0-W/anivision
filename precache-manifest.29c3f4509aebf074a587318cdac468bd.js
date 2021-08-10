@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "56a25066f63c2b64912ee1e8a442dd3f",
+    "revision": "c9ac1dfb8838acc504e364f684e94496",
     "url": "/anivision/index.html"
   },
   {
-    "revision": "94046c1863b08384b66c",
+    "revision": "da6318171a8d462a2179",
     "url": "/anivision/static/css/main.be7d3e6f.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/anivision/static/js/2.ca975f95.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "94046c1863b08384b66c",
-    "url": "/anivision/static/js/main.18c6be17.chunk.js"
+    "revision": "da6318171a8d462a2179",
+    "url": "/anivision/static/js/main.1c679866.chunk.js"
   },
   {
     "revision": "ba65e0698ce6fcc58f74",
