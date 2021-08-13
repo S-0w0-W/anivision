@@ -16,7 +16,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "tailwindcss": "^1.6.2",
-    "three": "^0.130.1"
+    "three": "^0.130.1",
+    "threejs-meshline": "^2.0.12"
   },
   "scripts": {
     "start": "react-scripts start",

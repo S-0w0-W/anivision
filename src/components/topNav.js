@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    color: "white",
   },
   list: {
     width: 250,
@@ -45,7 +46,7 @@ export default function TopNav({ PageName }) {
   const list = (anchor) => (
     <div className={classes.list} role="presentation">
       <List>
-        {["Home", "About", "THREE"].map((text, index) => (
+        {["Home", "About", "THREE", "Landing"].map((text, index) => (
           <ListItem button key={text} component={Link} to={text}>
             <ListItemIcon>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -54,38 +55,39 @@ export default function TopNav({ PageName }) {
           </ListItem>
         ))}
       </List>
-      {/* <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List> */}
     </div>
   );
 
   return (
+
     <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            onClick={handleDrawerOpen}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            {PageName}
-          </Typography>
-          <Button color="inherit">Login</Button>
-        </Toolbar>
-      </AppBar>
+      {/* <div className="menu"> */}
+      <div id="menuButton">
+        <IconButton
+          edge="start"
+          color="inherit"
+          aria-label="menu"
+          onClick={handleDrawerOpen}
+        >
+
+          <MenuIcon style={
+            {
+              color: "white",
+              fontSize: 40
+            }
+          } />
+        </IconButton>
+
+        <Typography variant="h6" className={classes.title}>
+          {PageName}
+        </Typography>
+      </div>
+
+
+
+
+
+      {/* </div> */}
       <Drawer open={open} onClose={() => setOpen(false)} anchor="left">
         {list()}
       </Drawer>
