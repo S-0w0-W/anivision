@@ -4,9 +4,7 @@ import TopNav from "../components/topNav";
 const About = () => {
   return (
     <div>
-      <TopNav PageName={"AboutPage"} />
-      <h1>About page</h1>
-      <body>aYOOOOOOOOOOOOOOOOOOOOOO</body>
+      <TopNav PageName={"About"} />
     </div>
   );
 };

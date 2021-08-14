@@ -1,27 +1,35 @@
-/* html, body {
-    background: rgb(155,89,182);
-    background: linear-gradient(50deg, rgba(155,89,182,1) 1%, rgba(41,128,185,1) 100%);
-} */
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
+:root{
+    --gradient: linear-gradient(38deg, rgba(83,8,130,1) 0%, rgba(27,195,136,1) 100%);
+}
 
-/* .landingPage{
-    b
-} */
 
-
-html, body {
-    background: rgb(155,89,182);
-    background: linear-gradient(50deg, rgba(155,89,182,1) 1%, rgba(41,128,185,1) 100%);
+body {
+    /* background: rgb(155,89,182);
+    background: linear-gradient(50deg, rgba(155,89,182,1) 1%, rgba(41,128,185,1) 100%); */
+    background-image: var(--gradient);
+    background-size: 150%;
     height: 100vh;
     width: 100vw;
+    animation: bg-animation 15s infinite alternate;
+}
+
+@keyframes bg-animation{
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
 }
     
 #title{
     color:beige;
     font-family: 'Open Sans', sans-serif;
-    font-size: 8vw;
+    font-size: 6vw;
+    padding-top: 10vh;
+   
 }
 
 .titleContainer{
@@ -37,4 +45,38 @@ html, body {
     align-items: center;
     padding-top: 3vh;
     padding-left: 3vw;
+}
+
+.icons{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 5vh;
+}
+
+#resumeIcon{
+    /* width: fit-content;
+    height: fit-content; */
+    margin: 0 auto;
+    margin-left: 35vw;
+}
+#githubIcon{
+    /* width: fit-content;
+    height: fit-content; */
+    margin: 0 auto;
+    margin-right: 35vw;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    /* width: auto\9; ie8 */
+    display: block;
+    transition: transform .2s;
+}
+
+img:hover {
+    transform: scale(1.5)
 }
