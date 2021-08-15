@@ -3,6 +3,7 @@ import TopNav from "../components/topNav";
 import "../css/landing.css"
 import resumeIcon from "../assets/icons8-resume-96.png"
 import githubIcon from "../assets/icons8-github-96.png"
+import linkedinIcon from "../assets/icons8-linkedin-120.png"
 import { Document, Page } from 'react-pdf';
 import ResumePDF from "../assets/resume.pdf"
 import Tooltip from '@material-ui/core/Tooltip';
@@ -38,11 +39,17 @@ const Landing = () => {
                     <img  src={resumeIcon} alt="resumeIcon"/>
                 </div>
             </LightTooltip>
+            <LightTooltip title="LinkedIn" arrow>
+                <div onClick={linkedinIconClick}id="linkedinIcon">
+                    <img  src={linkedinIcon} alt="linkedinIcon" width="100" height="100"/>
+                </div>
+            </LightTooltip>
             <LightTooltip title="GitHub" arrow>
                 <div onClick={githubIconClick}id="githubIcon">
                     <img  src={githubIcon} alt="githubIcon"/>
                 </div>
             </LightTooltip>
+           
             </div>
         </div>
     );
@@ -56,6 +63,11 @@ function githubIconClick(){
 function resumeIconClick(){
     console.log("resume icon clicked")
     window.open(ResumePDF);
+}
+
+function linkedinIconClick(){
+    console.log("linkedin icon clicked")
+    window.open("https://www.linkedin.com/in/shiyao-wang-01b5911b0/");
 }
 
 export default Landing;
