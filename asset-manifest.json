@@ -1,27 +1,28 @@
 {
   "files": {
     "main.css": "/anivision/static/css/main.ff8bb78d.chunk.css",
-    "main.js": "/anivision/static/js/main.14a8f408.chunk.js",
-    "main.js.map": "/anivision/static/js/main.14a8f408.chunk.js.map",
+    "main.js": "/anivision/static/js/main.cce3e42a.chunk.js",
+    "main.js.map": "/anivision/static/js/main.cce3e42a.chunk.js.map",
     "runtime-main.js": "/anivision/static/js/runtime-main.edda786f.js",
     "runtime-main.js.map": "/anivision/static/js/runtime-main.edda786f.js.map",
-    "static/js/2.268fca6f.chunk.js": "/anivision/static/js/2.268fca6f.chunk.js",
-    "static/js/2.268fca6f.chunk.js.map": "/anivision/static/js/2.268fca6f.chunk.js.map",
+    "static/js/2.efe68520.chunk.js": "/anivision/static/js/2.efe68520.chunk.js",
+    "static/js/2.efe68520.chunk.js.map": "/anivision/static/js/2.efe68520.chunk.js.map",
     "index.html": "/anivision/index.html",
-    "precache-manifest.4bb1915bf2b4b0423180511b57c16049.js": "/anivision/precache-manifest.4bb1915bf2b4b0423180511b57c16049.js",
+    "precache-manifest.5a1f7b01ddfd139012687923bdb032e6.js": "/anivision/precache-manifest.5a1f7b01ddfd139012687923bdb032e6.js",
     "service-worker.js": "/anivision/service-worker.js",
     "static/css/main.ff8bb78d.chunk.css.map": "/anivision/static/css/main.ff8bb78d.chunk.css.map",
-    "static/js/2.268fca6f.chunk.js.LICENSE.txt": "/anivision/static/js/2.268fca6f.chunk.js.LICENSE.txt",
+    "static/js/2.efe68520.chunk.js.LICENSE.txt": "/anivision/static/js/2.efe68520.chunk.js.LICENSE.txt",
     "static/media/bread.glb": "/anivision/static/media/bread.a859407e.glb",
     "static/media/github_3d.glb": "/anivision/static/media/github_3d.3e2eee36.glb",
-    "static/media/github_3d_2.glb": "/anivision/static/media/github_3d_2.699194d8.glb",
-    "static/media/linkedin_3d.glb": "/anivision/static/media/linkedin_3d.3f62e117.glb",
-    "static/media/resume.pdf": "/anivision/static/media/resume.6d314de3.pdf"
+    "static/media/github_3d_2.glb": "/anivision/static/media/github_3d_2.5cfa9fe8.glb",
+    "static/media/linkedin_3d.glb": "/anivision/static/media/linkedin_3d.fc50acfa.glb",
+    "static/media/resume.pdf": "/anivision/static/media/resume.6d314de3.pdf",
+    "static/media/resume_3d.glb": "/anivision/static/media/resume_3d.5f67af07.glb"
   },
   "entrypoints": [
     "static/js/runtime-main.edda786f.js",
-    "static/js/2.268fca6f.chunk.js",
+    "static/js/2.efe68520.chunk.js",
     "static/css/main.ff8bb78d.chunk.css",
-    "static/js/main.14a8f408.chunk.js"
+    "static/js/main.cce3e42a.chunk.js"
   ]
 }
