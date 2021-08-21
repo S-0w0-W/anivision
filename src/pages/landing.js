@@ -9,9 +9,12 @@ import Tooltip from '@material-ui/core/Tooltip';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import { GLTFLoader } from 'three-stdlib';
 import linkedin3d from "../assets/linkedin_3d.glb"
+import github3d from "../assets/github_3d.glb"
+import github3d_2 from "../assets/github_3d_2.glb"
 import Bread from "../assets/bread.glb"
 import * as THREE from "three";
 import { OrbitControls } from 'three-stdlib';
+import glbLoader from '../components/glbLoader';
 
 
 const LightTooltip = withStyles((theme) => ({
@@ -31,18 +34,12 @@ const LightTooltip = withStyles((theme) => ({
 }))(Tooltip);
 
 
+window.addEventListener('load', function () {
+    console.log("BRUH")
 
-
-window.onload = function() {
 
     const scene = new THREE.Scene()
-    // scene.background = new THREE.Color( 0x301201 );
 
-    // var sizes = {
-    //     width: document.getElementById('threeIcons').offsetWidth,
-    //     height: document.getElementById('threeIcons').offsetHeight
-    // }
-    // console.log(window.innerWidth, window.innerHeight)
     const sizes = {
         width: window.innerWidth,
         height: window.innerHeight
@@ -58,44 +55,48 @@ window.onload = function() {
     light.position.set(1,-3, 20)
     scene.add(light)
 
+    const light2 = new THREE.DirectionalLight(0xffffff, 1)
+    light2.position.set(1,5, 125)
+    scene.add(light2)
+
     const renderer = new THREE.WebGLRenderer({
         alpha: true
     })
     renderer.setSize( window.innerWidth, window.innerHeight )
     renderer.setClearColor( 0x000000, 0 ); // the default
-    document.getElementById('threeIcons').appendChild(renderer.domElement)
+
+    setTimeout(function(){ 
+        console.log(document.getElementById('threeIcons'))
+        document.getElementById('threeIcons').appendChild(renderer.domElement)
+    }, 100);
+
+    
 
     var controls = new OrbitControls(camera, renderer.domElement)
     controls.update();
     controls.enableDamping = true;
 
-    let obj
 
     const loader = new GLTFLoader()
-    loader.load(linkedin3d, (gltf)=>{
-        let root = gltf.scene
-        obj = gltf.scene
+    let obj1, obj2
 
-        root.scale.set(1,1,1)
-        root.translateY(2)
+    obj1 = new glbLoader(linkedin3d, scene)
+    obj1.setPos(0, 0, 0)
 
-        animate()
-        scene.add(gltf.scene)
-    })
-
+    obj2 = new glbLoader(github3d_2, scene)
+    obj2.setPos(1, 0, 0)
     
+    
+
 
     function animate(){
         requestAnimationFrame(animate)
-        // console.log(obj)
-        obj.rotation.x += 0.01;
-        obj.rotation.y += 0.01;
-        obj.rotation.z += 0.01;
-        controls.update();
+        controls.update()
         renderer.render(scene, camera)
-
-        // console.log("bruh")
     }
+    animate()
+
+
     
 
     function onWindowResize(){
@@ -114,25 +115,13 @@ window.onload = function() {
     
     }
     window.addEventListener( 'resize', onWindowResize, false );
-    // setTimeout(function() {
-        
+})
 
-    //     let x = document.getElementsByClassName("landingPage")
-    //     x[0].appendChild(renderer.domElement)
+// window.onload = function() {
 
-    //     renderer.render(scene, camera)
-        
-    //     window.open(Bread)
-    //     console.log(Bread)
+    
 
-    //     const loader = new GLTFLoader()
-    //     loader.load(Bread, (gltf)=>{
-    //         scene.add(gltf.scene)
-    //     })
-
-    //     animate()
-    // }, 100)
-  };
+// };
 
 const Landing = () => {
 
