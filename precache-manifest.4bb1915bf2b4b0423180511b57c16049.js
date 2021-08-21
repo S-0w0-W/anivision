@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9ca40f08f8fba3fb3931c6f72ef40dfc",
+    "revision": "a0124110df07dc7ef410705810df375b",
     "url": "/anivision/index.html"
   },
   {
-    "revision": "52dbe4910181a4dda2bf",
+    "revision": "8854946e362006cc7a9e",
     "url": "/anivision/static/css/main.ff8bb78d.chunk.css"
   },
   {
-    "revision": "ecd627c7b93137c0cad8",
-    "url": "/anivision/static/js/2.83ce49a8.chunk.js"
+    "revision": "3a62ac1a8c097be7b3ee",
+    "url": "/anivision/static/js/2.268fca6f.chunk.js"
   },
   {
     "revision": "50dea923800ef5178403d9a52fc6246a",
-    "url": "/anivision/static/js/2.83ce49a8.chunk.js.LICENSE.txt"
+    "url": "/anivision/static/js/2.268fca6f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "52dbe4910181a4dda2bf",
-    "url": "/anivision/static/js/main.383b37ec.chunk.js"
+    "revision": "8854946e362006cc7a9e",
+    "url": "/anivision/static/js/main.14a8f408.chunk.js"
   },
   {
     "revision": "ba65e0698ce6fcc58f74",
@@ -26,6 +26,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a859407e8ba384278d3abe42e083894c",
     "url": "/anivision/static/media/bread.a859407e.glb"
+  },
+  {
+    "revision": "3e2eee367c5dedfd04e381e574fde44a",
+    "url": "/anivision/static/media/github_3d.3e2eee36.glb"
+  },
+  {
+    "revision": "699194d8e4bd683c4e6332e06b329e96",
+    "url": "/anivision/static/media/github_3d_2.699194d8.glb"
   },
   {
     "revision": "3f62e11759f5bbff143026a43438d6e0",
