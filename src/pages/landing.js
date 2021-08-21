@@ -11,6 +11,7 @@ import { GLTFLoader } from 'three-stdlib';
 import linkedin3d from "../assets/linkedin_3d.glb"
 import github3d from "../assets/github_3d.glb"
 import github3d_2 from "../assets/github_3d_2.glb"
+import resume_3d from "../assets/resume_3d.glb"
 import Bread from "../assets/bread.glb"
 import * as THREE from "three";
 import { OrbitControls } from 'three-stdlib';
@@ -85,6 +86,9 @@ window.addEventListener('load', function () {
 
     obj2 = new glbLoader(github3d_2, scene)
     obj2.setPos(1, 0, 0)
+
+    obj2 = new glbLoader(resume_3d, scene)
+    obj2.setPos(-1, 0, 0)
     
     
 

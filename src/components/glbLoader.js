@@ -19,7 +19,7 @@ export default class glbLoader extends React.Component {
 
     animate(){
         requestAnimationFrame(this.animate)
-        // this.state.root.rotation.x += 0.01;
+        this.state.root.rotation.x += 0.01;
         this.state.root.rotation.y += 0.01;
         this.state.root.rotation.z += 0.01;
     }
