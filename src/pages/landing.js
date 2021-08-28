@@ -18,6 +18,7 @@ import { OrbitControls } from 'three-stdlib';
 import glbLoader from '../components/glbLoader';
 
 
+
 const LightTooltip = withStyles((theme) => ({
     arrow: {
         "&:before": {
@@ -67,8 +68,10 @@ window.addEventListener('load', function () {
     renderer.setClearColor( 0x000000, 0 ); // the default
 
     setTimeout(function(){ 
-        console.log(document.getElementById('threeIcons'))
-        document.getElementById('threeIcons').appendChild(renderer.domElement)
+        // console.log(document.getElementById('threeIcons'))
+        if (document.getElementById('threeIcons') !== null){
+            document.getElementById('threeIcons').appendChild(renderer.domElement)
+        }
     }, 100);
 
     
