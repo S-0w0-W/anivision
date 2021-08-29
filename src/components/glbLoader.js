@@ -21,6 +21,8 @@ export default class glbLoader extends React.Component {
       this.test = this.test.bind(this)
       this.setPos = this.setPos.bind(this)
       this.setScale = this.setScale.bind(this)
+      this.getScale = this.getScale.bind(this)
+
 
 
       this.test()
@@ -28,9 +30,9 @@ export default class glbLoader extends React.Component {
 
     animate(){
         requestAnimationFrame(this.animate)
-        this.state.root.rotation.x += 0.01;
+        // this.state.root.rotation.x += 0.01;
         this.state.root.rotation.y += 0.01;
-        this.state.root.rotation.z += 0.01;
+        // this.state.root.rotation.z += 0.01;
 
         // this.state.curScale.x += Math.sin(this.state.timeCount/100)*0.005
         // this.state.curScale.y += Math.sin(this.state.timeCount/100)*0.005
@@ -70,6 +72,10 @@ export default class glbLoader extends React.Component {
         this.state.curScale.x = scaleObj.x
         this.state.curScale.y = scaleObj.y
         this.state.curScale.z = scaleObj.z
+    }
+
+    getScale(){
+        return(this.state.curScale)
     }
     
 }
