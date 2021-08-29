@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8a3df0bece08b3f70181505acc256b47",
+    "revision": "01a4929380d97ab7595088112aba1e99",
     "url": "/anivision/index.html"
   },
   {
-    "revision": "efe7ee3c0670200066c0",
+    "revision": "3b5b64f2805eabea521b",
     "url": "/anivision/static/css/main.ff8bb78d.chunk.css"
   },
   {
-    "revision": "7e219922ddbcf88ab7de",
-    "url": "/anivision/static/js/2.1ce2a6ab.chunk.js"
+    "revision": "1787118d2481fb1739f1",
+    "url": "/anivision/static/js/2.e40ae7e2.chunk.js"
   },
   {
     "revision": "50dea923800ef5178403d9a52fc6246a",
-    "url": "/anivision/static/js/2.1ce2a6ab.chunk.js.LICENSE.txt"
+    "url": "/anivision/static/js/2.e40ae7e2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "efe7ee3c0670200066c0",
-    "url": "/anivision/static/js/main.4024dd30.chunk.js"
+    "revision": "3b5b64f2805eabea521b",
+    "url": "/anivision/static/js/main.08a4d6c1.chunk.js"
   },
   {
     "revision": "ba65e0698ce6fcc58f74",
     "url": "/anivision/static/js/runtime-main.edda786f.js"
+  },
+  {
+    "revision": "08b705e0bad5ea049fac33c49f1f2996",
+    "url": "/anivision/static/media/audioVis.08b705e0.glb"
   },
   {
     "revision": "a859407e8ba384278d3abe42e083894c",
