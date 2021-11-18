@@ -1,6 +1,7 @@
 import React from "react"
 import { GLTFLoader } from 'three-stdlib';
 import * as THREE from "three";
+import { calcPosFromAngles } from "@react-three/drei";
 
 export default class glbLoader extends React.Component {
     constructor(glb, scene) {
@@ -15,17 +16,17 @@ export default class glbLoader extends React.Component {
                 y: 1,
                 z: 1
             },
-            timeCount: 0
+            timeCount: 0,
+            color: null,
+            object: null
         }
-      this.animate = this.animate.bind(this)
-      this.test = this.test.bind(this)
-      this.setPos = this.setPos.bind(this)
-      this.setScale = this.setScale.bind(this)
-      this.getScale = this.getScale.bind(this)
-
-
-
-      this.test()
+        this.test = this.test.bind(this)
+        this.animate = this.animate.bind(this)
+        this.test()
+        this.setPos = this.setPos.bind(this)
+        this.setColor = this.setColor.bind(this)
+        this.setScale = this.setScale.bind(this)
+        this.getScale = this.getScale.bind(this)
     }
 
     animate(){
@@ -45,7 +46,18 @@ export default class glbLoader extends React.Component {
     }
 
     test(){
+        let THIS = this
         this.state.loader.load(this.state.glb, (gltf)=>{
+            gltf.scene.traverse(function (object){
+                if ( object.isMesh ) {
+
+                    THIS.state.object = object
+
+                    // object.material.color.set( 0xffffff * Math.random() );
+            
+                }
+
+            })
             this.state.root = gltf.scene
             // console.log(this.state.root)
 
@@ -67,6 +79,11 @@ export default class glbLoader extends React.Component {
         
     }
 
+    setColor(color){
+        this.state.color = color
+        // this.state.object.material.color.set( color * Math.random() )
+    }
+
     setScale(scaleObj){
         // console.log(scaleObj)
         this.state.curScale.x = scaleObj.x
@@ -77,7 +94,7 @@ export default class glbLoader extends React.Component {
     getScale(){
         return(this.state.curScale)
     }
-    
+
 }
 
 

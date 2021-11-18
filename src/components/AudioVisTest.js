@@ -29,7 +29,7 @@ export default class AudioVisTest extends React.Component {
     }
 
     componentDidMount(){
-        let visLength = 20
+        let visLength = 30
 
         this.setUpThreeJS(visLength)
         this.setupAudio(visLength)
@@ -102,8 +102,8 @@ export default class AudioVisTest extends React.Component {
 
         for(let i=0;i<this.state.barArr.length;i++){
             scaleObj =  this.state.barArr[i].getScale()
-            console.log(this.state.dataArray)
-            console.log((this.state.dataArray[this.state.freqIndxArr[i]]/50) -1, i)
+            // console.log(this.state.dataArray)
+            // console.log((this.state.dataArray[this.state.freqIndxArr[i]]/50) -1, i)
             scaleObj.y = (this.state.dataArray[this.state.freqIndxArr[i]]/50) -1
             this.state.barArr[i].setScale(scaleObj)
         }
@@ -138,20 +138,6 @@ export default class AudioVisTest extends React.Component {
         renderer.setSize( window.innerWidth, window.innerHeight )
         renderer.setClearColor( 0x000000, 0 ); // the default
 
-
-        // const loader = new GLTFLoader()
-        // let obj1, obj2, obj3
-
-        // obj1 = new glbLoader(linkedin3d, scene)
-        // this.state.barArr.push(obj1)
-
-        // obj2 = new glbLoader(github3d_2, scene)
-        // this.state.barArr.push(obj2)
-
-        // obj3 = new glbLoader(resume_3d, scene)
-        // this.state.barArr.push(obj3)
-
-        
         let THIS = this
         setTimeout(function(){ 
             // console.log(document.getElementById('threeIcons'))
@@ -159,7 +145,7 @@ export default class AudioVisTest extends React.Component {
                 document.getElementById('AudioVis').appendChild(renderer.domElement)
 
                 // let visLength = 20
-                let startPosX = -2.5
+                let startPosX = -3.5
                 let scaleObj
                 scaleObj = {
                     x: 0.6,
@@ -171,10 +157,8 @@ export default class AudioVisTest extends React.Component {
                     THIS.state.barArr.push(obj)
                     obj.setScale(scaleObj)
                     obj.setPos((startPosX + (i/4)), -0.5, 0)
+                    obj.setColor(0xa81b48)
                 }
-                // obj1.setPos(0, 0, 0)
-                // obj2.setPos(1, 0, 0)
-                // obj3.setPos(-1, 0, 0)
             }
         }, 100);
         

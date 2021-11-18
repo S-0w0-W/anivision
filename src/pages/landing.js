@@ -36,93 +36,93 @@ const LightTooltip = withStyles((theme) => ({
 }))(Tooltip);
 
 
-window.addEventListener('load', function () {
-    console.log("BRUH")
+// window.addEventListener('load', function () {
+//     console.log("BRUH")
 
 
-    const scene = new THREE.Scene()
+//     const scene = new THREE.Scene()
 
-    const sizes = {
-        width: window.innerWidth,
-        height: window.innerHeight
-    }
+//     const sizes = {
+//         width: window.innerWidth,
+//         height: window.innerHeight
+//     }
 
-    const camera = new THREE.PerspectiveCamera(30, sizes.width/sizes.height, 0.1, 100)
-    // camera.position.set(0, 0.01, 5)
-    camera.position.set(3, 3, 10)
+//     const camera = new THREE.PerspectiveCamera(30, sizes.width/sizes.height, 0.1, 100)
+//     // camera.position.set(0, 0.01, 5)
+//     camera.position.set(3, 3, 10)
 
-    scene.add(camera)
+//     scene.add(camera)
 
-    const light = new THREE.DirectionalLight(0xffffff, 2)
-    light.position.set(1,-3, 20)
-    scene.add(light)
+//     const light = new THREE.DirectionalLight(0xffffff, 2)
+//     light.position.set(1,-3, 20)
+//     scene.add(light)
 
-    const light2 = new THREE.DirectionalLight(0xffffff, 1)
-    light2.position.set(1,5, 125)
-    scene.add(light2)
+//     const light2 = new THREE.DirectionalLight(0xffffff, 1)
+//     light2.position.set(1,5, 125)
+//     scene.add(light2)
 
-    const renderer = new THREE.WebGLRenderer({
-        alpha: true
-    })
-    renderer.setSize( window.innerWidth, window.innerHeight )
-    renderer.setClearColor( 0x000000, 0 ); // the default
+//     const renderer = new THREE.WebGLRenderer({
+//         alpha: true
+//     })
+//     renderer.setSize( window.innerWidth, window.innerHeight )
+//     renderer.setClearColor( 0x000000, 0 ); // the default
 
-    setTimeout(function(){ 
-        // console.log(document.getElementById('threeIcons'))
-        if (document.getElementById('threeIcons') !== null){
-            document.getElementById('threeIcons').appendChild(renderer.domElement)
-        }
-    }, 100);
-
-    
-
-    var controls = new OrbitControls(camera, renderer.domElement)
-    controls.update();
-    controls.enableDamping = true;
-
-
-    const loader = new GLTFLoader()
-    let obj1, obj2
-
-    obj1 = new glbLoader(linkedin3d, scene)
-    obj1.setPos(0, 0, 0)
-
-    obj2 = new glbLoader(github3d_2, scene)
-    obj2.setPos(1, 0, 0)
-
-    obj2 = new glbLoader(resume_3d, scene)
-    obj2.setPos(-1, 0, 0)
-    
-    
-
-
-    function animate(){
-        requestAnimationFrame(animate)
-        controls.update()
-        renderer.render(scene, camera)
-    }
-    animate()
-
+//     setTimeout(function(){ 
+//         // console.log(document.getElementById('threeIcons'))
+//         if (document.getElementById('threeIcons') !== null){
+//             document.getElementById('threeIcons').appendChild(renderer.domElement)
+//         }
+//     }, 100);
 
     
 
-    function onWindowResize(){
-        sizes = {
-            width: document.getElementById('threeIcons').offsetWidth,
-            height: document.getElementById('threeIcons').offsetHeight
-        }
+//     var controls = new OrbitControls(camera, renderer.domElement)
+//     controls.update();
+//     controls.enableDamping = true;
 
-        console.log(sizes.width, sizes.height)
 
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
+//     const loader = new GLTFLoader()
+//     let obj1, obj2
+
+//     obj1 = new glbLoader(linkedin3d, scene)
+//     obj1.setPos(0, 0, 0)
+
+//     obj2 = new glbLoader(github3d_2, scene)
+//     obj2.setPos(1, 0, 0)
+
+//     obj2 = new glbLoader(resume_3d, scene)
+//     obj2.setPos(-1, 0, 0)
+    
+    
+
+
+//     function animate(){
+//         requestAnimationFrame(animate)
+//         controls.update()
+//         renderer.render(scene, camera)
+//     }
+//     animate()
+
+
+    
+
+//     function onWindowResize(){
+//         sizes = {
+//             width: document.getElementById('threeIcons').offsetWidth,
+//             height: document.getElementById('threeIcons').offsetHeight
+//         }
+
+//         console.log(sizes.width, sizes.height)
+
+//         camera.aspect = window.innerWidth / window.innerHeight;
+//         camera.updateProjectionMatrix();
         
     
-        renderer.setSize( window.innerWidth, window.innerHeight );
+//         renderer.setSize( window.innerWidth, window.innerHeight );
     
-    }
-    window.addEventListener( 'resize', onWindowResize, false );
-})
+//     }
+//     window.addEventListener( 'resize', onWindowResize, false );
+// })
 
 // window.onload = function() {
 
