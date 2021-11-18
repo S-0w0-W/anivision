@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/anivision/static/css/main.ff8bb78d.chunk.css",
-    "main.js": "/anivision/static/js/main.08a4d6c1.chunk.js",
-    "main.js.map": "/anivision/static/js/main.08a4d6c1.chunk.js.map",
+    "main.css": "/anivision/static/css/main.1e84ad3f.chunk.css",
+    "main.js": "/anivision/static/js/main.ab1dffe8.chunk.js",
+    "main.js.map": "/anivision/static/js/main.ab1dffe8.chunk.js.map",
     "runtime-main.js": "/anivision/static/js/runtime-main.edda786f.js",
     "runtime-main.js.map": "/anivision/static/js/runtime-main.edda786f.js.map",
-    "static/js/2.e40ae7e2.chunk.js": "/anivision/static/js/2.e40ae7e2.chunk.js",
-    "static/js/2.e40ae7e2.chunk.js.map": "/anivision/static/js/2.e40ae7e2.chunk.js.map",
+    "static/css/2.451bf2e4.chunk.css": "/anivision/static/css/2.451bf2e4.chunk.css",
+    "static/js/2.8578ba46.chunk.js": "/anivision/static/js/2.8578ba46.chunk.js",
+    "static/js/2.8578ba46.chunk.js.map": "/anivision/static/js/2.8578ba46.chunk.js.map",
     "index.html": "/anivision/index.html",
-    "precache-manifest.76a0b06ed9c8136196eefe3f4d0de4f4.js": "/anivision/precache-manifest.76a0b06ed9c8136196eefe3f4d0de4f4.js",
+    "precache-manifest.6a06b336a407510256e1e5c4378e8682.js": "/anivision/precache-manifest.6a06b336a407510256e1e5c4378e8682.js",
     "service-worker.js": "/anivision/service-worker.js",
-    "static/css/main.ff8bb78d.chunk.css.map": "/anivision/static/css/main.ff8bb78d.chunk.css.map",
-    "static/js/2.e40ae7e2.chunk.js.LICENSE.txt": "/anivision/static/js/2.e40ae7e2.chunk.js.LICENSE.txt",
+    "static/css/2.451bf2e4.chunk.css.map": "/anivision/static/css/2.451bf2e4.chunk.css.map",
+    "static/css/main.1e84ad3f.chunk.css.map": "/anivision/static/css/main.1e84ad3f.chunk.css.map",
+    "static/js/2.8578ba46.chunk.js.LICENSE.txt": "/anivision/static/js/2.8578ba46.chunk.js.LICENSE.txt",
     "static/media/audioVis.glb": "/anivision/static/media/audioVis.08b705e0.glb",
     "static/media/bread.glb": "/anivision/static/media/bread.a859407e.glb",
     "static/media/github_3d.glb": "/anivision/static/media/github_3d.3e2eee36.glb",
@@ -22,8 +24,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.edda786f.js",
-    "static/js/2.e40ae7e2.chunk.js",
-    "static/css/main.ff8bb78d.chunk.css",
-    "static/js/main.08a4d6c1.chunk.js"
+    "static/css/2.451bf2e4.chunk.css",
+    "static/js/2.8578ba46.chunk.js",
+    "static/css/main.1e84ad3f.chunk.css",
+    "static/js/main.ab1dffe8.chunk.js"
   ]
 }
