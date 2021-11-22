@@ -7,6 +7,9 @@ import { OrbitControls, FlakesTexture, RGBELoader } from 'three-stdlib';
 import Loadglb from '../components/Loadglb';
 import AudioVis from "../assets/audioVis.glb";
 import github3d_2 from "../assets/github_3d_2.glb"
+import head from "../assets/Head_BlockOut.glb"
+import Bread from "../assets/bread.glb"
+
 
 let scene, camera, renderer, controls, pointLight
 function threeInit(){
@@ -68,14 +71,6 @@ function threeInit(){
     new Loadglb(github3d_2, document.body)
     
 }
-
-function animate(){
-    controls.update()
-    controls.enableDamping = true;
-    renderer.render(scene, camera)
-    requestAnimationFrame(animate)
-}
-
 
 
 const Testing = () => {

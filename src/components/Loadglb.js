@@ -20,10 +20,32 @@ export default class Loadglb extends React.Component {
             controls: null, 
             pointLight: null,
             object: null,
+            mouseX: 0,
+            mouseY: 0,
+            currX_rot: 0,
+            currX_rot_offset: 90,
+            currY_rot: 0,
+            currY_rot_offset: 270,
+            currZ_rot: 0,
+            
+
         }
         this.init()
         this.init = this.init.bind(this)
         this.animate = this.animate.bind(this)
+        this.mousePosLog = this.mousePosLog.bind(this)
+    }
+
+    mousePosLog(){
+        document.onmousemove = handleMouseMove
+        let THIS = this
+        function handleMouseMove(event){
+            // console.log(window.innerWidth, window.innerHeight)
+            // console.log(event.clientX, event.clientY)
+            THIS.state.mouseX = event.clientX
+            THIS.state.mouseY = event.clientY
+
+        }
     }
     
 
@@ -31,6 +53,57 @@ export default class Loadglb extends React.Component {
         this.state.controls.update()
         this.state.controls.enableDamping = true;
         this.state.renderer.render(this.state.scene, this.state.camera)
+        
+        const a = new THREE.Vector3( 0, -1, 0 )
+        this.state.root.lookAt(a)
+        this.state.object.rotation.z = 90 * (Math.PI / 180)
+
+        let b1, b2, dist1, dist2
+        if (window.innerHeight/2 < this.state.mouseY){
+            // console.log("BOTTOM")
+            b1 = (this.state.mouseY - (window.innerHeight/2))/(window.innerHeight/2)
+            dist1 = b1 * 45
+            this.state.object.rotation.x = (dist1 + this.state.currX_rot_offset) * (Math.PI / 180)
+            
+        }else if (window.innerHeight/2 > this.state.mouseY){
+            // console.log("TOP")
+            b1 = ((window.innerHeight/2) - this.state.mouseY)/(window.innerHeight/2)
+            dist1 = b1 * 45 * -1
+            this.state.object.rotation.x = (dist1 + this.state.currX_rot_offset) * (Math.PI / 180)
+
+        }
+ 
+        if (window.innerWidth/2 > this.state.mouseX){
+            console.log("LEFT")
+            b2 = ((window.innerWidth/2) - this.state.mouseX)/(window.innerWidth/2)
+            dist2 = b2 * 45
+            // console.log(dist2)
+
+            this.state.object.rotation.y = (dist2 + this.state.currY_rot_offset) * (Math.PI / 180)
+        
+        }else if (window.innerWidth/2 < this.state.mouseX){
+            console.log("RIGHT")
+            b2 = ((window.innerWidth/2) - this.state.mouseX)/(window.innerWidth/2)
+            dist2 = b2 * 45
+            // console.log(dist2)
+            
+            this.state.object.rotation.y = (dist2 + this.state.currY_rot_offset) * (Math.PI / 180)
+
+        }
+
+
+        // this.state.object.rotation.y = (-45 + this.state.currY_rot_offset) * (Math.PI / 180)
+        // this.state.object.rotation.x = (45 + this.state.currX_rot_offset) * (Math.PI / 180);
+        
+
+        // console.log(this.state.mouseX, this.state.mouseY)
+        // this.state.object.rotation.x += 0.01
+        // this.state.object.rotation.y += 0.01
+        // this.state.object.rotation.z += 0.01
+        // this.state.object.lookAt = 0
+        
+        
+
         requestAnimationFrame(this.animate)
     }
 
@@ -48,7 +121,7 @@ export default class Loadglb extends React.Component {
         this.state.controls = new OrbitControls(this.state.camera, this.state.renderer.domElement)
 
         this.state.pointLight = new THREE.PointLight(0xffffff, 1)
-        this.state.pointLight.position.set(0, 200, 0)
+        this.state.pointLight.position.set(100, 0, 0)
         this.state.scene.add(this.state.pointLight)
 
         this.state.renderer.outputEncoding = THREE.sRGBEncoding
@@ -64,6 +137,7 @@ export default class Loadglb extends React.Component {
                 if ( object instanceof THREE.Mesh ) {
 
                     // child.material = material;
+                    THIS.state.object = object
 
                     new RGBELoader().load(envMap, function(hdrmap){
     
@@ -94,9 +168,12 @@ export default class Loadglb extends React.Component {
             })
             this.state.root = gltf.scene
             this.state.root.scale.set(400, 400, 400)
+            this.state.root.lookAt(1, 0, 0)
             this.state.scene.add(this.state.root)
             this.animate()
         })
+
+        this.mousePosLog()
     }
 }
 
