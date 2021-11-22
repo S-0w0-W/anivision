@@ -53,7 +53,7 @@ export default class glbLoader extends React.Component {
 
                     THIS.state.object = object
 
-                    // object.material.color.set( 0xffffff * Math.random() );
+                    object.material.color.set( 0xffffff * Math.random() );
             
                 }
 

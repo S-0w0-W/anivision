@@ -1,5 +1,5 @@
 import { ThumbUpSharp } from "@material-ui/icons";
-import React from "react";
+import React, { useEffect } from 'react';
 import * as THREE from "three";
 import { GLTFLoader } from 'three-stdlib';
 import { OrbitControls } from 'three-stdlib';
@@ -28,11 +28,20 @@ export default class AudioVisTest extends React.Component {
 
     }
 
+
+    // useEffect(()=>{
+    //     let visLength = 30
+
+    //     this.setUpThreeJS(visLength)
+    //     this.setupAudio(visLength)
+    // }, [])
     componentDidMount(){
         let visLength = 30
-
-        this.setUpThreeJS(visLength)
-        this.setupAudio(visLength)
+        setTimeout(() => {
+            this.setUpThreeJS(visLength)
+            this.setupAudio(visLength)
+        }, 100);
+        
     }
 
     setupAudio(visLength){
@@ -152,6 +161,7 @@ export default class AudioVisTest extends React.Component {
                     y: 0.6,
                     z: 0.6
                 }
+
                 for(let i=0;i<visLength;i++){
                     let obj = new glbLoader(AudioVis, scene)
                     THIS.state.barArr.push(obj)
@@ -159,7 +169,13 @@ export default class AudioVisTest extends React.Component {
                     obj.setPos((startPosX + (i/4)), -0.5, 0)
                     obj.setColor(0xa81b48)
                 }
+
+                
+                // scene.add(ballMesh)
             }
+
+            
+
         }, 100);
         
     

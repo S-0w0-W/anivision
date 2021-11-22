@@ -46,7 +46,7 @@ export default function TopNav({ PageName }) {
   const list = (anchor) => (
     <div className={classes.list} role="presentation">
       <List>
-        {["Home", "About", "THREE", "Landing", "Projects"].map((text, index) => (
+        {["Home", "About", "THREE", "Landing", "Projects", "Testing"].map((text, index) => (
           <ListItem button key={text} component={Link} to={text}>
             <ListItemIcon>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
